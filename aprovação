@@ -1,0 +1,29 @@
+def Media():
+    nota_grau_a = float(input("Digite a nota do Grau A: "))
+    nota_grau_b = float(input("Digite a nota do Grau B: "))
+
+    media_final = ((nota_grau_a + (2 * nota_grau_b)) / 3)
+
+    if media_final >= 6.0:
+        print(f"Média final: {media_final:.2f}")
+        print("O aluno foi aprovado por média.")
+    else:
+        print(f"Média final: {media_final:.2f}")
+        print("O aluno ficou em recuperação (Grau C).")
+        
+        substituir_grau = input("Deseja substituir o Grau A ou o Grau B (digite 'a' ou 'b'): ")
+        
+        nota_grau_c = float(input("Digite a nota do Grau C: "))
+        
+        if substituir_grau == 'a':
+            media_final = (nota_grau_b + nota_grau_c) / 2
+        elif substituir_grau == 'b':
+            media_final = (nota_grau_a + nota_grau_c) / 2
+        
+        if media_final >= 6.0:
+            print(f"Média final após substituição: {media_final:.2f}")
+            print("O aluno foi aprovado após a substituição.")
+        else:
+            print(f"Média final após substituição: {media_final:.2f}")
+            print("O aluno foi reprovado após a substituição.")
+Media()
