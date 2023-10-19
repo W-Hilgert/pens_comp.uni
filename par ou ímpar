@@ -1,0 +1,28 @@
+import random
+
+def par_ou_impar():
+    print("Bem-vindo ao jogo PAR ou ÍMPAR!")
+    escolha = input("Você quer apostar em PAR ou ÍMPAR? ").strip().lower()
+
+    if escolha not in ["par", "ímpar"]:
+        print("Escolha inválida. Por favor, digite 'par' ou 'ímpar'.")
+        return
+
+    numero_usuario = int(input("Escolha um número de 0 a 5: "))
+
+    if numero_usuario < 0 or numero_usuario > 5:
+        print("Número fora do intervalo permitido. Escolha um número de 0 a 5.")
+        return
+
+    numero_aleatorio = random.randint(0, 5)
+    soma = numero_usuario + numero_aleatorio
+
+    print(f"Você escolheu {escolha} e digitou {numero_usuario}. O computador escolheu {numero_aleatorio}.")
+    print(f"A soma dos números é {soma}.")
+
+    if (escolha == "par" and soma % 2 == 0) or (escolha == "ímpar" and soma % 2 != 0):
+        print("Parabéns! Você venceu!")
+    else:
+        print("O programa venceu. Tente novamente!")
+
+par_ou_impar()
