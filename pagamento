@@ -1,0 +1,24 @@
+def preco():
+    preco_produto = float(input("Digite o preço do produto: R$ "))
+
+    print("Escolha a condição de pagamento:")
+    print("1 - À vista em dinheiro (15% de desconto)")
+    print("2 - À vista no cartão (10% de desconto)")
+    print("3 - Em até 2 vezes no cartão (preço normal)")
+    print("4 - 3 ou mais vezes no cartão (10% de juros)")
+    condicao_pagamento = int(input("Digite o código da condição de pagamento: "))
+
+    if condicao_pagamento == 1:
+        valor_pago = preco_produto * 0.85  # 15% de desconto
+    elif condicao_pagamento == 2:
+        valor_pago = preco_produto * 0.90  # 10% de desconto
+    elif condicao_pagamento == 3:
+        valor_pago = preco_produto  # Preço normal
+    elif condicao_pagamento == 4:
+        valor_pago = preco_produto * 1.20  # 20% de juros
+    else:
+        print("Condição de pagamento inválida. Escolha um código válido.")
+
+    if condicao_pagamento in [1, 2, 3, 4]:
+        print(f"O valor a ser pago é R$ {valor_pago:.2f}")
+preco()
