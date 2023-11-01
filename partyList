@@ -1,0 +1,29 @@
+/* 10 pessoas, testar 10 variaveis de acesso a festa*/
+var classList = [
+     'willian',
+     'julia',
+     'henrique',
+     'luiza',
+     'isabelli',
+     'ana',
+     'sofia',
+     'luiz',
+     'matheus',
+     'camilla'
+
+];
+
+
+function displayClassList({i}) {
+    var name = prompt('qual é o seu nome?');
+    console.log('meu nome é, ' + name);
+
+    for (var i = 0; i <
+        classList.length; i++){
+            console.log((i + 1)+ ". " + 
+            classList[i]);
+        };
+};
+
+
+displayClassList();
