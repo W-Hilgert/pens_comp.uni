@@ -1,29 +1,31 @@
-/* 10 pessoas, testar 10 variaveis de acesso a festa*/
-var classList = [
-     'willian',
-     'julia',
-     'henrique',
-     'luiza',
-     'isabelli',
-     'ana',
-     'sofia',
-     'luiz',
-     'matheus',
-     'camilla'
+# list of people with party access
+party_guests = [
+    "willian",
+    "luiz",
+    "henrique",
+    "matheus",
+    "laura",
+    "carol",
+    "isabella",
+    "mariana",
+    "roberta",
+    "luiza"
+]
 
-];
+# Function to display the list of people with access
+def display_party_guests():
+    for i, guest in enumerate(party_guests, start=1):
+        print(f"Guest {i}: {guest}")
 
-
-function displayClassList({i}) {
-    var name = prompt('qual é o seu nome?');
-    console.log('meu nome é, ' + name);
-
-    for (var i = 0; i <
-        classList.length; i++){
-            console.log((i + 1)+ ". " + 
-            classList[i]);
-        };
-};
+# Call the function to display the list of people with access
+display_party_guests()
 
 
-displayClassList();
+def permission_party_access():
+    access = input("Enter your name: ")
+    if access in party_guests:
+        print(f"{access}, you have access to the party!")
+    else:
+        print(f"{access}, you do not have access to the party!")
+
+permission_party_access()
